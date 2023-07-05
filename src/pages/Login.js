@@ -8,6 +8,7 @@ import illustration from "images/login-illustration.svg";
 import logo from "images/logo.svg";
 import googleIconImageSrc from "images/google-icon.png";
 import twitterIconImageSrc from "images/twitter-icon.png";
+import naverIconImageSrc from "images/naver.ico";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
@@ -64,9 +65,9 @@ export default ({
       url: "https://google.com"
     },
     {
-      iconImageSrc: twitterIconImageSrc,
-      text: "Sign In With Twitter",
-      url: "https://twitter.com"
+      iconImageSrc: naverIconImageSrc,
+      text: "Sign In With Naver",
+      url: "https://naver.com"
     }
   ],
   submitButtonText = "Sign In",
