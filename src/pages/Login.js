@@ -6,8 +6,9 @@ import styled from "styled-components";
 import {css} from "styled-components/macro"; //eslint-disable-line
 import illustration from "images/login-illustration.svg";
 import logo from "images/logo.svg";
+import hbdLogo from "images/hbdLogo.jpeg";
 import googleIconImageSrc from "images/google-icon.png";
-gimport naverIconImageSrc from "images/naver.ico";
+import naverIconImageSrc from "images/naver.ico";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
@@ -80,7 +81,7 @@ export default ({
       <Content>
         <MainContainer>
           <LogoLink href={logoLinkUrl}>
-            <LogoImage src={logo} />
+            <LogoImage src={hbdLogo} />
           </LogoLink>
           <MainContent>
             <Heading>{headingText}</Heading>
