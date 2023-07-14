@@ -53,6 +53,10 @@ const IllustrationImage = styled.div`
   ${tw`m-12 xl:m-16 w-full max-w-sm bg-contain bg-center bg-no-repeat`}
 `;
 
+const submitEvent () => {
+  
+}
+
 export default ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
@@ -101,7 +105,7 @@ export default ({
               <Form>
                 <Input type="email" placeholder="Email" />
                 <Input type="password" placeholder="Password" />
-                <SubmitButton type="submit">
+                <SubmitButton type="submit" onClick={submitEvent}>
                   <SubmitButtonIcon className="icon" />
                   <span className="text">{submitButtonText}</span>
                 </SubmitButton>
