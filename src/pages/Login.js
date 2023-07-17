@@ -53,7 +53,7 @@ const IllustrationImage = styled.div`
   ${tw`m-12 xl:m-16 w-full max-w-sm bg-contain bg-center bg-no-repeat`}
 `;
 
-const submitEvent () => {
+const submitEvent = () => {
   
 }
 
@@ -77,7 +77,7 @@ export default ({
   SubmitButtonIcon = LoginIcon,
   forgotPasswordUrl = "#",
   signupUrl = "#",
-
+  data,
 }) => (
   <AnimationRevealPage>
     <Container>
@@ -87,7 +87,7 @@ export default ({
             <LogoImage src={hbdLogo} />
           </LogoLink>
           <MainContent>
-            <Heading>{headingText}</Heading>
+            <Heading>{data}</Heading>
             <FormContainer>
               <SocialButtonsContainer>
                 {socialButtons.map((socialButton, index) => (
