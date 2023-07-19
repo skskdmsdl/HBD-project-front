@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import "tailwindcss/lib/css/preflight.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
 import Hero from "components/hero/FullWidthWithImage"
-import Login from "pages/Login"
+import Login from "views/login/Login"
 import { StyleReset, Icon } from "atomize"
 
 function App() {
