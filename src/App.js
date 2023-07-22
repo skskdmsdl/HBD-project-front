@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "tailwindcss/lib/css/preflight.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
-import Login from "views/login/Login"
+import Login from "views/Login"
 import { StyleReset, Icon } from "atomize"
 
 function App() {
@@ -15,12 +15,14 @@ function App() {
   }, []);
 
   return (
+    <>
     <AnimationRevealPage>
 
       <Login data={data}/>
       {/* <StyleReset /> */}
       {/* <Icon name="Add" size="10px" /> */}
     </AnimationRevealPage>
+    </>
 
   )
 }
