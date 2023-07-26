@@ -77,7 +77,6 @@ export default ({
   SubmitButtonIcon = LoginIcon,
   forgotPasswordUrl = "#",
   signupUrl = "#",
-  data,
 }) => (
   <AnimationRevealPage>
     <Container>
@@ -87,7 +86,7 @@ export default ({
             <LogoImage src={hbdLogo} />
           </LogoLink>
           <MainContent>
-            <Heading>{data}</Heading>
+            <Heading>{headingText}</Heading>
             <FormContainer>
               <SocialButtonsContainer>
                 {socialButtons.map((socialButton, index) => (
@@ -117,7 +116,7 @@ export default ({
               </p>
               <p tw="mt-8 text-sm text-gray-600 text-center">
                 Dont have an account?{" "}
-                <a href={signupUrl} tw="border-b border-gray-500 border-dotted">
+                <a href={'signupUrl'} tw="border-b border-gray-500 border-dotted">
                   Sign Up
                 </a>
               </p>

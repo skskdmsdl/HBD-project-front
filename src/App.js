@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react"
 import "tailwindcss/lib/css/preflight.css"
-import AnimationRevealPage from "helpers/AnimationRevealPage"
-import Login from "views/Login"
 import { StyleReset, Icon } from "atomize"
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+
+import IndexRoutes from './routes';
+
+const routes = IndexRoutes();
 
 function App() {
   const [data, setData] = useState('');
@@ -16,16 +18,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Switch>
-        <AnimationRevealPage>
-          <Login data={data}/>
-          {/* <StyleReset /> */}
-          {/* <Icon name="Add" size="10px" /> */}
-        </AnimationRevealPage>
-      </Switch>
-    </BrowserRouter>
-
+    <RouterProvider router={routes} />
   )
 }
 
