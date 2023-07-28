@@ -5,20 +5,10 @@ import { RouterProvider } from 'react-router-dom';
 
 import IndexRoutes from './routes';
 
-const routes = IndexRoutes();
-
 function App() {
-  const [data, setData] = useState('');
-
-  useEffect(() => {
-    fetch('/api/main')
-        .then(response => response.text())
-        .then(data => setData(data))
-        .catch(error => console.error(error));
-  }, []);
 
   return (
-    <RouterProvider router={routes} />
+    <RouterProvider router={IndexRoutes()} />
   )
 }
 
