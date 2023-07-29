@@ -79,7 +79,7 @@ const Login = ({
   const navigate = useNavigate(); 
 
   const submitEvent = () => {
-    navigate('/main');
+    navigate('/main', { replace: true });
   };
 
   return (

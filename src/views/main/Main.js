@@ -5,9 +5,9 @@ import { Router } from 'react-router-dom';
 
 const Main = () => {
   return (
-    <Router>
+    <>
       <StyleReset />
-    </Router>
+    </>
   );
 }
 
