@@ -4,10 +4,12 @@ import { RouterProvider } from 'react-router-dom';
 
 import IndexRoutes from './routes';
 
+const routes = IndexRoutes()
+
 function App() {
 
   return (
-    <RouterProvider router={IndexRoutes()} />
+      <RouterProvider router={routes} />
   )
 }
 
