@@ -74,7 +74,6 @@ const Login = ({
   submitButtonText = "Sign In",
   SubmitButtonIcon = LoginIcon,
   forgotPasswordUrl = "#",
-  signupUrl = "#",
 }) => {
   const navigate = useNavigate(); 
 
