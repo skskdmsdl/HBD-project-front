@@ -4,7 +4,6 @@ import { Container as ContainerBase } from "components/misc/Layouts";
 import tw from "twin.macro";
 import styled from "styled-components";
 import {css} from "styled-components/macro"; //eslint-disable-line
-import illustration from "images/login-illustration.svg";
 import hbdLogo from "images/hbdLogo.jpeg";
 import googleIconImageSrc from "images/google-icon.png";
 import naverIconImageSrc from "images/naver.ico";
