@@ -4,6 +4,7 @@ import { Container as ContainerBase } from "components/misc/Layouts";
 import tw from "twin.macro";
 import styled from "styled-components";
 import {css} from "styled-components/macro"; //eslint-disable-line
+import illustration from "images/login-illustration.svg";
 import hbdLogo from "images/hbdLogo.jpeg";
 import googleIconImageSrc from "images/google-icon.png";
 import naverIconImageSrc from "images/naver.ico";
@@ -47,9 +48,15 @@ const SubmitButton = styled.button`
     ${tw`ml-3`}
   }
 `;
+const IllustrationContainer = tw.div`sm:rounded-r-lg flex-1 bg-purple-100 text-center hidden lg:flex justify-center`;
+const IllustrationImage = styled.div`
+  ${props => `background-image: url("${props.imageSrc}");`}
+  ${tw`m-12 xl:m-16 w-full max-w-sm bg-contain bg-center bg-no-repeat`}
+`;
 
 const Login = ({
   logoLinkUrl = "#",
+  illustrationImageSrc = illustration,
   headingText = "HBD-PROJECT",
   socialButtons = [
     {
@@ -70,7 +77,7 @@ const Login = ({
   const navigate = useNavigate(); 
 
   const submitEvent = () => {
-    navigate('/main', { replace: true });
+    navigate('/', { replace: true });
   };
 
   return (
@@ -112,14 +119,17 @@ const Login = ({
                 </p>
                 <p tw="mt-8 text-sm text-gray-600 text-center">
                   Dont have an account?{" "}
-                  <Link to={'/main'}>TEST</Link>
-                  <a href={'/main'} tw="border-b border-gray-500 border-dotted">
+                  <Link to={'/'}>TEST</Link>
+                  <a href={'/'} tw="border-b border-gray-500 border-dotted">
                     Sign Up
                   </a>
                 </p>
               </FormContainer>
             </MainContent>
           </MainContainer>
+          <IllustrationContainer>
+            <IllustrationImage imagesrc={illustrationImageSrc} />
+          </IllustrationContainer> 
         </Content>
       </Container>
     </AnimationRevealPage>

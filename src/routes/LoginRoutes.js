@@ -1,15 +1,14 @@
 import AnimationRevealPage from "helpers/AnimationRevealPage";
+
 import Login from "views/Login";
-import Main from "views/main/Main";
 
 const MainRoutes = {
-    path: '/',
+    path: '/login',
     element: (
-        <Main />
+        <AnimationRevealPage>
+            <Login />
+        </AnimationRevealPage>
     ),
-    children: [
-        
-    ]
 };
 
 export default MainRoutes;
