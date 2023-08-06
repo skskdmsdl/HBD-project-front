@@ -119,7 +119,6 @@ const Login = ({
                 </p>
                 <p tw="mt-8 text-sm text-gray-600 text-center">
                   Dont have an account?{" "}
-                  <Link to={'/'}>TEST</Link>
                   <a href={'/'} tw="border-b border-gray-500 border-dotted">
                     Sign Up
                   </a>
