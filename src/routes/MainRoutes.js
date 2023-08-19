@@ -1,14 +1,14 @@
-import AnimationRevealPage from "helpers/AnimationRevealPage";
-import Login from "views/Login";
-import Main from "views/main/Main";
+import MainLayout from "components/layout/MainLayout";
+import Album from "views/album/Album";
 
 const MainRoutes = {
     path: '/',
     element: (
-        <Main />
+        <MainLayout />
     ),
     children: [
-        
+        { path: '/album', element: <Album /> },
+
     ]
 };
 
