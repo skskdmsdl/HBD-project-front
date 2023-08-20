@@ -10,6 +10,8 @@ import googleIconImageSrc from "images/google-icon.png";
 import naverIconImageSrc from "images/naver.ico";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { GOOGLE_AUTH_URL } from "common/constants";
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
@@ -62,7 +64,7 @@ const Login = ({
     {
       iconImageSrc: googleIconImageSrc,
       text: "Sign In With Google",
-      url: "https://google.com"
+      url: GOOGLE_AUTH_URL
     },
     {
       iconImageSrc: naverIconImageSrc,
@@ -80,6 +82,19 @@ const Login = ({
     navigate('/', { replace: true });
   };
 
+  const handleLogin = (loginUrl) => {
+    const url = loginUrl
+
+    const width = 700;
+    const height = 600;
+    const left = window.innerWidth / 2 - width / 2;
+    const top = window.innerHeight / 2 - height / 2;
+
+    const options = `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes,status=yes`;
+
+    window.open(url, 'Google Login', options);
+  }
+
   return (
     <AnimationRevealPage>
       <Container>
@@ -93,7 +108,7 @@ const Login = ({
               <FormContainer>
                 <SocialButtonsContainer>
                   {socialButtons.map((socialButton, index) => (
-                    <SocialButton key={index} href={socialButton.url}>
+                    <SocialButton style={{cursor: 'pointer'}} key={index} onClick={() => handleLogin(socialButton.url)}>
                       <span className="iconContainer">
                         <img src={socialButton.iconImageSrc} className="icon" alt=""/>
                       </span>
