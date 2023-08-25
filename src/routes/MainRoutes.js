@@ -8,7 +8,6 @@ const MainRoutes = {
     ),
     children: [
         { path: '/album', element: <Album /> },
-
     ]
 };
 
