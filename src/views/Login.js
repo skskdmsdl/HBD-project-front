@@ -108,7 +108,6 @@ const Login = ({
               <FormContainer>
                 <SocialButtonsContainer>
                   {socialButtons.map((socialButton, index) => (
-                    // <SocialButton style={{cursor: 'pointer'}} key={index} href={socialButton.url}>
                     <SocialButton style={{cursor: 'pointer'}} key={index} onClick={() => handleLogin(socialButton.url)}>
                       <span className="iconContainer">
                         <img src={socialButton.iconImageSrc} className="icon" alt=""/>
