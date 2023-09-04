@@ -60,13 +60,11 @@ const Login = ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
   headingText = "HBD-PROJECT",
-  socialButtons = [
-    {
+  socialButtons = [{
       iconImageSrc: googleIconImageSrc,
       text: "Sign In With Google",
       url: GOOGLE_AUTH_URL
-    },
-    {
+    }, {
       iconImageSrc: naverIconImageSrc,
       text: "Sign In With Naver",
       url: "https://naver.com"
