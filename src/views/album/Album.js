@@ -41,9 +41,8 @@ const CardLinks = styled.div`
 `
 
 export default ({
-  heading = "Meet These Fine Folks.",
-  subheading = "Our Team",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  heading = "HBD 기록함",
+  description = "추억이 방울방울",
   cards = [
     {
       imageSrc: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
@@ -165,7 +164,6 @@ export default ({
     <Container>
       <ContentWithPaddingXl>
         <HeadingContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
           {heading && <Heading>{heading}</Heading> }
           {description && <Description>{description}</Description> }
         </HeadingContainer>
