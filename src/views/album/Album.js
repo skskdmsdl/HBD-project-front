@@ -41,7 +41,7 @@ const CardLinks = styled.div`
 `
 
 export default ({
-  heading = "HBD 기록함",
+  heading = "HBD RECORD",
   description = "추억이 방울방울",
   cards = [
     {
