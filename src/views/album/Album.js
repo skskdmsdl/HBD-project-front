@@ -177,7 +177,7 @@ export default ({
                 <CardLinks>
                   {card.links.map((link, linkIndex) => (
                     <a key={linkIndex} className="link" href={link.url}>
-                      <link.icon className="icon" />
+                      {/* <link.icon className="icon" /> */}
                     </a>
                   ))}
                 </CardLinks>
