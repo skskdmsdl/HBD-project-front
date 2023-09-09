@@ -30,16 +30,6 @@ const CardContent = styled.div`
   9
 `
 
-const CardLinks = styled.div`
-  ${tw`mt-6 flex`}
-  .link {
-    ${tw`mr-8 last:mr-0 text-gray-400 hocus:text-primary-500 transition duration-300`}
-    .icon {
-      ${tw`fill-current w-6 h-6`}
-    }
-  }
-`
-
 export default ({
   heading = "HBD RECORD",
   description = "추억이 방울방울",
@@ -90,13 +80,6 @@ export default ({
               <CardContent>
                 <span className="position">{card.position}</span>
                 <span className="name">{card.name}</span>
-                <CardLinks>
-                  {card.links.map((link, linkIndex) => (
-                    <a key={linkIndex} className="link" href={link.url}>
-                      {/* <link.icon className="icon" /> */}
-                    </a>
-                  ))}
-                </CardLinks>
               </CardContent>
             </Card>
           ))}
