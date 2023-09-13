@@ -10,7 +10,6 @@ import googleIconImageSrc from "images/google-icon.png";
 import naverIconImageSrc from "images/naver.ico";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { GOOGLE_AUTH_URL } from "common/constants";
 
 const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
